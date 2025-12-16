@@ -46,3 +46,6 @@ shell: setup
 challenge_009: setup
 	@echo "🚀 Running exercise 2..."
 	singularity run $(IMAGE) java ./challenge_009/HelloWorld.java
+
+	@echo "🚀 Running exercise 3..."
+	singularity run $(IMAGE) gcc ./challenge_009/HelloWorld.c -o HelloWorld && ./HelloWorld
