@@ -38,11 +38,11 @@ clean:
 	fi
 
 # Open a shell inside the image
-shell: verify
+shell: setup
 	@echo "🐚 Entering container shell..."
 	singularity shell $(IMAGE)
 
 # Build Singularity image
 challenge_009: setup
 	@echo "🚀 Running exercise 2..."
-	singularity run $(IMAGE) ./challenge_009/HelloWorld.java
+	singularity run $(IMAGE) java ./challenge_009/HelloWorld.java
